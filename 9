@@ -1,0 +1,19 @@
+// Solicitar al usuario que ingrese el primer número
+var primerNumero = prompt("Ingresa el primer número:");
+
+// Convertir el input en número
+var numero1 = parseFloat(primerNumero);
+
+// Solicitar al usuario que ingrese el segundo número
+var segundoNumero = prompt("Ingresa el segundo número:");
+
+// Convertir el input en número
+var numero2 = parseFloat(segundoNumero);
+
+// Utilizar el operador ternario para determinar el número mayor
+var numeroMayor = numero1 > numero2 ? numero1 : numero2;
+
+// Mostrar el número mayor en una alerta
+alert("El número mayor es: " + numeroMayor);
+
+En este código, el operador ternario condition ? value1 : value2 se utiliza para determinar el número mayor entre numero1 y numero2. Si numero1 es mayor que numero2, se asigna el valor de numero1 a numeroMayor; de lo contrario, se asigna el valor de numero2. Luego, se muestra el número mayor en una alerta.
