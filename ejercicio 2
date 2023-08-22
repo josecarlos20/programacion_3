@@ -1,0 +1,11 @@
+
+var temperaturaCelsius = prompt("Ingresa la temperatura en Celsius:");
+
+
+var celsius = parseFloat(temperaturaCelsius);
+
+
+var fahrenheit = (celsius * 9/5) + 32;
+
+
+alert(celsius + " grados Celsius equivalen a " + fahrenheit.toFixed(2) + " grados Fahrenheit.");
