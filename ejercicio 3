@@ -1,0 +1,11 @@
+
+var numero = prompt("Ingresa un número:");
+
+
+var numeroConvertido = parseFloat(numero);
+
+
+var resultado = numeroConvertido / 10;
+
+
+alert(numeroConvertido + " dividido por 10 es igual a " + resultado);
