@@ -1,0 +1,16 @@
+const n = parseInt(prompt("Ingresa el valor de N:"));
+const m = parseInt(prompt("Ingresa el valor de M:"));
+
+if (!isNaN(n) && !isNaN(m)) {
+    let sumaPares = 0;
+
+    for (let i = n; i <= m; i++) {
+        if (i % 2 === 0) {
+            sumaPares += i;
+        }
+    }
+
+    console.log(`Suma de los números pares entre ${n} y ${m}: ${sumaPares}`);
+} else {
+    console.log("Los valores ingresados no son números válidos.");
+}
