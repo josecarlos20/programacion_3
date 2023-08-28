@@ -1,0 +1,32 @@
+const array = [1, 2, 3, 4, 5, 6];
+
+// Iterar usando while
+let i = 0;
+while (i < array.length) {
+    console.log(array[i]);
+    i++;
+}
+
+// Iterar usando for
+for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+}
+
+// Iterar usando .forEach
+array.forEach(element => {
+    console.log(element);
+});
+
+// Mostrar todos los elementos sumando uno
+array.forEach(element => {
+    console.log(element + 1);
+});
+
+// Generar una copia del array con elementos incrementados en 1
+const newArray = array.map(element => element + 1);
+console.log(newArray);
+
+// Calcular el promedio
+const sum = array.reduce((acc, currentValue) => acc + currentValue, 0);
+const average = sum / array.length;
+console.log("Promedio:", average);
