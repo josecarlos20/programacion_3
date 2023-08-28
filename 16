@@ -1,0 +1,16 @@
+// Definir valores iniciales de a y b
+let a = false;
+let b = false;
+
+// Mostrar valores iniciales de las expresiones
+console.log("!a && !b:", !a && !b);
+console.log("!a || !b:", !a || !b);
+
+// Cambiar valores de a y b y mostrar los nuevos resultados
+a = true;
+console.log("!a && !b:", !a && !b);
+console.log("!a || !b:", !a || !b);
+
+b = true;
+console.log("!a && !b:", !a && !b);
+console.log("!a || !b:", !a || !b);
