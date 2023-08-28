@@ -1,0 +1,37 @@
+const altura = 5; // Altura del diamante
+
+// Mitad superior del diamante
+for (let i = 1; i <= altura; i++) {
+    const espacios = altura - i;
+    const asteriscos = 2 * i - 1;
+
+    // Imprimir espacios
+    for (let j = 0; j < espacios; j++) {
+        document.write("&nbsp;");
+    }
+
+    // Imprimir asteriscos
+    for (let j = 0; j < asteriscos; j++) {
+        document.write("*");
+    }
+
+    document.write("<br>");
+}
+
+// Mitad inferior del diamante (sin el pico central)
+for (let i = altura - 1; i >= 1; i--) {
+    const espacios = altura - i;
+    const asteriscos = 2 * i - 1;
+
+    // Imprimir espacios
+    for (let j = 0; j < espacios; j++) {
+        document.write("&nbsp;");
+    }
+
+    // Imprimir asteriscos
+    for (let j = 0; j < asteriscos; j++) {
+        document.write("*");
+    }
+
+    document.write("<br>");
+}
