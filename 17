@@ -1,0 +1,79 @@
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Ingresa la cantidad de números a solicitar: ', (cantidad) => {
+    const numeros = [];
+
+    // Solicitar al usuario que ingrese los números
+    for (let i = 0; i < cantidad; i++) {
+        rl.question(`Ingresa el número ${i + 1}: `, (numero) => {
+            numeros.push(parseInt(numero));
+
+            if (numeros.length === cantidad) {
+                rl.close();
+                procesarNumeros(numeros);
+            }
+        });
+    }
+});
+
+function esPrimo(num) {
+    if (num <= 1) return false;
+    if (num <= 3) return true;
+
+    if (num % 2 === 0 || num % 3 === 0) return false;
+
+    let i = 5;
+    while (i * i <= num) {
+        if (num % i === 0 || num % (i + 2) === 0) return false;
+        i += 6;
+    }
+
+    return true;
+}
+
+function procesarNumeros(numeros) {
+    const impares = numeros.filter(numero => numero % 2 !== 0);
+    const pares = numeros.filter(numero => numero % 2 === 0);
+    const primos = numeros.filter(numero => esPrimo(numero));
+
+    if (impares.length > 0) {
+        console.log("Números impares:", impares);
+    } else {
+        console.log("No hay números impares.");
+    }
+
+    if (pares.length > 0) {
+        console.log("Números pares:", pares);
+    } else {
+        console.log("No hay números pares.");
+    }
+
+    if (primos.length > 0) {
+        console.log("Números primos:", primos);
+    } else {
+        console.log("No hay números primos.");
+    }
+
+    const numerosOrdenados = numeros.slice().sort((a, b) => a - b);
+    console.log("Números ordenados:", numerosOrdenados);
+
+    const tiposDeDato = {};
+    numeros.forEach(numero => {
+        const tipo = typeof numero;
+        if (!tiposDeDato[tipo]) {
+            tiposDeDato[tipo] = 1;
+        } else {
+            tiposDeDato[tipo]++;
+        }
+    });
+
+    console.log("Tipos de datos:", tiposDeDato);
+
+    const multiplosDe4 = numeros.filter(numero => numero % 4 === 0);
+    console.log("Múltiplos de 4:", multiplosDe4);
+}
