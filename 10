@@ -1,0 +1,12 @@
+// Solicitar al usuario que ingrese un string
+const userInput = prompt("Ingresa un string:");
+
+// Obtener el primer carácter del string
+const firstCharacter = userInput.charAt(0);
+
+// Verificar si el primer carácter es un número
+if (!isNaN(firstCharacter)) {
+    console.log("El string empieza con un número.");
+} else {
+    console.log("El string empieza con una letra.");
+}
