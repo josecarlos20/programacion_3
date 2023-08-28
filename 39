@@ -1,0 +1,5 @@
+function mostrarValor(valor) {
+    console.log(valor);
+}
+
+mostrarValor(5); // Llamada a la función con el valor 5
