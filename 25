@@ -1,0 +1,15 @@
+const n = parseInt(prompt("Ingresa el valor de N:"));
+
+if (!isNaN(n)) {
+    for (let i = 1; i <= n; i++) {
+        let factorial = 1;
+
+        for (let j = 1; j <= i; j++) {
+            factorial *= j;
+        }
+
+        console.log(`Factorial de ${i} es: ${factorial}`);
+    }
+} else {
+    console.log("El valor ingresado no es un número válido.");
+}
