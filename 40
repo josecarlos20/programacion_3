@@ -1,0 +1,8 @@
+function multiply(a, b) {
+    return a * b;
+}
+
+const resultado = multiply(5, 3);
+console.log(resultado); // Mostrará el resultado de la multiplicación (15) en la consola
+
+//En este código, he añadido return a * b; en la función para que realmente devuelva el resultado de la multiplicación. Luego, llamamos a la función multiply(5, 3) y almacenamos el resultado en la variable resultado. Finalmente, mostramos el resultado en la consola con console.log(resultado). Ahora la función debería devolver el resultado de la multiplicación en lugar de undefined.
