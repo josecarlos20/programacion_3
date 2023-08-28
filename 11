@@ -1,0 +1,11 @@
+// Solicitar al usuario que ingrese los tres ángulos del triángulo
+const angulo1 = parseInt(prompt("Ingresa el valor del primer ángulo:"));
+const angulo2 = parseInt(prompt("Ingresa el valor del segundo ángulo:"));
+const angulo3 = parseInt(prompt("Ingresa el valor del tercer ángulo:"));
+
+// Verificar si la suma de los ángulos es 180 grados (condición para que sea un triángulo válido)
+if (angulo1 + angulo2 + angulo3 === 180) {
+    console.log("Los ángulos ingresados forman un triángulo válido.");
+} else {
+    console.log("Los ángulos ingresados no forman un triángulo válido.");
+}
