@@ -1,0 +1,32 @@
+const n = parseInt(prompt("Ingresa cuántos números primos deseas generar:"));
+
+if (!isNaN(n) && n > 0) {
+    let numerosPrimos = [];
+    let numero = 2;
+
+    while (numerosPrimos.length < n) {
+        if (esPrimo(numero)) {
+            numerosPrimos.push(numero);
+        }
+        numero++;
+    }
+
+    console.log(`Los primeros ${n} números primos son: ${numerosPrimos.join(', ')}`);
+} else {
+    console.log("El valor ingresado no es válido o no es mayor que 0.");
+}
+
+function esPrimo(num) {
+    if (num <= 1) return false;
+    if (num <= 3) return true;
+
+    if (num % 2 === 0 || num % 3 === 0) return false;
+
+    let i = 5;
+    while (i * i <= num) {
+        if (num % i === 0 || num % (i + 2) === 0) return false;
+        i += 6;
+    }
+
+    return true;
+}
