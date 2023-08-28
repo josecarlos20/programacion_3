@@ -1,0 +1,13 @@
+// Obtener edad
+if (edad < 13) {
+	console.log("Es niño");
+} else if (edad < 18) {
+	console.log("Es adolescente");
+} else {
+	console.log("Es adulto");
+}
+
+
+El error en el código radica en la segunda condición if. Dado que no está vinculada con la primera condición if por medio de un else, ambas condiciones pueden ser verdaderas simultáneamente en algunos casos, lo que lleva a resultados inesperados.
+
+Para corregir esto, puedes utilizar un else if para establecer la conexión entre las tres condiciones. Aquí está el código corregido
