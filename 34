@@ -1,0 +1,12 @@
+const tamaño = 5; // Tamaño del cuadrado
+
+for (let i = 0; i < tamaño; i++) {
+    for (let j = 0; j < tamaño; j++) {
+        if (i === 0 || i === tamaño - 1 || j === 0 || j === tamaño - 1) {
+            document.write("*");
+        } else {
+            document.write("&nbsp;");
+        }
+    }
+    document.write("<br>");
+}
