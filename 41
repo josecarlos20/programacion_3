@@ -1,0 +1,6 @@
+function sumar(a, b) {
+    return a + b;
+}
+
+const resultado = sumar(5, 3);
+console.log(resultado); // Mostrará el resultado de la suma (8) en la consola
