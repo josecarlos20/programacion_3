@@ -1,0 +1,10 @@
+function verificarEntero(numero) {
+    if (Number.isInteger(numero)) {
+        console.log("El número es un entero.");
+    } else {
+        console.error("Error: El valor proporcionado no es un número entero.");
+    }
+}
+
+verificarEntero(5); // Ejemplo de llamada con un número entero
+verificarEntero("Hola"); // Ejemplo de llamada con un valor no numérico
