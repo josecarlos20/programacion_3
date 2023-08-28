@@ -1,0 +1,12 @@
+// Solicitar al usuario que ingrese una palabra
+const palabra = prompt("Ingresa una palabra:");
+
+// Obtener el primer carácter de la palabra
+const primerCaracter = palabra.charAt(0);
+
+// Verificar si el primer carácter es una letra mayúscula
+if (primerCaracter === primerCaracter.toUpperCase()) {
+    console.log("La palabra empieza con mayúscula.");
+} else {
+    console.log("La palabra no empieza con mayúscula.");
+}
