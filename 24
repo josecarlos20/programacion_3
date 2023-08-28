@@ -1,0 +1,13 @@
+const n = parseInt(prompt("Ingresa el valor de N:"));
+
+if (!isNaN(n)) {
+    let sumatoria = 0;
+
+    for (let i = 1; i <= n; i++) {
+        sumatoria += i;
+    }
+
+    console.log(`La sumatoria de los primeros ${n} números es: ${sumatoria}`);
+} else {
+    console.log("El valor ingresado no es un número válido.");
+}
