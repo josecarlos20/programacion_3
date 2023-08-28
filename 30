@@ -1,0 +1,32 @@
+const n = parseInt(prompt("Ingresa cuántos números perfectos deseas generar:"));
+
+if (!isNaN(n) && n > 0) {
+    let numerosPerfectos = [];
+    let numero = 2;
+
+    while (numerosPerfectos.length < n) {
+        if (esNumeroPerfecto(numero)) {
+            numerosPerfectos.push(numero);
+        }
+        numero++;
+    }
+
+    console.log(`Los primeros ${n} números perfectos son: ${numerosPerfectos.join(', ')}`);
+} else {
+    console.log("El valor ingresado no es válido o no es mayor que 0.");
+}
+
+function esNumeroPerfecto(num) {
+    let sumaDivisores = 1;
+
+    for (let i = 2; i * i <= num; i++) {
+        if (num % i === 0) {
+            sumaDivisores += i;
+            if (i !== num / i) {
+                sumaDivisores += num / i;
+            }
+        }
+    }
+
+    return sumaDivisores === num;
+}
