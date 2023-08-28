@@ -1,0 +1,11 @@
+const n = parseInt(prompt("Ingresa un número:"));
+
+if (!isNaN(n)) {
+    let i = n;
+    while (i >= 1) {
+        console.log(i);
+        i--;
+    }
+} else {
+    console.log("El valor ingresado no es un número válido.");
+}
