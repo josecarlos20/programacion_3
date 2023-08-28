@@ -1,0 +1,15 @@
+const numeroIngresado = prompt("Ingresa un número:");
+
+// Verificar si el número ingresado contiene solo dígitos
+if (/^\d+$/.test(numeroIngresado)) {
+    let sumaDigitos = 0;
+
+    for (let i = 0; i < numeroIngresado.length; i++) {
+        sumaDigitos += parseInt(numeroIngresado[i]);
+    }
+
+    console.log(`Número ingresado: ${numeroIngresado}`);
+    console.log(`Suma de los dígitos: ${sumaDigitos}`);
+} else {
+    console.log("El valor ingresado contiene letras o caracteres no numéricos.");
+}
