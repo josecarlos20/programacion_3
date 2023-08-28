@@ -1,0 +1,28 @@
+while (true) {
+    const numero = parseInt(prompt("Ingresa un número mayor o igual a 2 para determinar si es primo. Ingresa 0 para salir:"));
+
+    if (numero === 0) {
+        console.log("Fin del programa.");
+        break;
+    }
+
+    if (isNaN(numero) || numero < 2) {
+        console.log("El valor ingresado no es válido. Ingresa un número mayor o igual a 2.");
+        continue;
+    }
+
+    let esPrimo = true;
+
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+        if (numero % i === 0) {
+            esPrimo = false;
+            break;
+        }
+    }
+
+    if (esPrimo) {
+        console.log(`${numero} es un número primo.`);
+    } else {
+        console.log(`${numero} no es un número primo.`);
+    }
+}
