@@ -1,0 +1,12 @@
+// Escoger un número aleatorio entre 1 y 10
+const numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+
+// Solicitar al usuario que ingrese un número
+const numeroUsuario = parseInt(prompt("Intenta adivinar el número (entre 1 y 10):"));
+
+// Verificar si el número del usuario coincide con el número aleatorio
+if (numeroUsuario === numeroAleatorio) {
+    console.log("¡Buen trabajo! Adivinaste el número.");
+} else {
+    console.log("No corresponde. El número era " + numeroAleatorio + ".");
+}
