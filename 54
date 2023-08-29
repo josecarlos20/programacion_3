@@ -1,0 +1,7 @@
+// Array de números
+let numerosArray = [1, 2, 3, 4, 5];
+
+// Convertir el array en un string separado por comas
+let numerosString = numerosArray.join(',');
+
+console.log(numerosString); // Mostrar el string resultante
