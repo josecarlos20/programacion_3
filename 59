@@ -1,0 +1,17 @@
+function calcularPromedioEnRango(arreglo, inicio, fin) {
+  const valoresEnRango = arreglo.slice(inicio, fin + 1);
+  
+  if (valoresEnRango.length === 0) {
+    return 0;
+  }
+  
+  const suma = valoresEnRango.reduce((total, valor) => total + valor, 0);
+  return suma / valoresEnRango.length;
+}
+
+const arreglo = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+const puntoInicio = 2; // Índice del primer elemento en el rango
+const puntoFin = 5; // Índice del último elemento en el rango
+
+const promedioEnRango = calcularPromedioEnRango(arreglo, puntoInicio, puntoFin);
+console.log("Promedio en rango:", promedioEnRango);
