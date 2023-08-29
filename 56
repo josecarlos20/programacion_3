@@ -1,0 +1,13 @@
+function dividirArreglo(arr) {
+  const mitad = Math.ceil(arr.length / 2);
+  const grupo1 = arr.slice(0, mitad);
+  const grupo2 = arr.slice(mitad);
+
+  return [grupo1, grupo2];
+}
+
+const arregloOriginal = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const [grupo1, grupo2] = dividirArreglo(arregloOriginal);
+
+console.log("Grupo 1:", grupo1);
+console.log("Grupo 2:", grupo2);
