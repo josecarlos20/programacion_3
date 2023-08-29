@@ -1,0 +1,12 @@
+// Array de colores
+let colores = ["azul", "amarillo", "rojo", "verde", "café", "rosa"];
+
+// Obtener el color del usuario
+let colorUsuario = prompt("Introduce un color:").toLowerCase(); // Convertir a minúsculas
+
+// Verificar si el color se encuentra en el array
+if (colores.includes(colorUsuario)) {
+  console.log(`El color "${colorUsuario}" se encuentra en el array.`);
+} else {
+  console.log(`El color "${colorUsuario}" no se encuentra en el array.`);
+}
