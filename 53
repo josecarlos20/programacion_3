@@ -1,0 +1,10 @@
+// Obtener el string del usuario
+let inputString = prompt("Ingresa una lista de números separados por comas:");
+
+// Dividir el string en un array de strings usando la coma como separador
+let stringArray = inputString.split(',');
+
+// Convertir el array de strings en un array de números
+let numerosArray = stringArray.map(numero => parseInt(numero));
+
+console.log(numerosArray); // Mostrar el array de números
