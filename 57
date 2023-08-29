@@ -1,0 +1,8 @@
+function copiarArreglo(arr) {
+  return arr.slice();
+}
+
+const arregloOriginal = [1, 2, 3, 4, 5];
+const arregloCopia = copiarArreglo(arregloOriginal);
+
+console.log(arregloCopia); // Mostrar la copia del arreglo
