@@ -1,0 +1,17 @@
+function calcularPromedio(arreglo) {
+  if (arreglo.length === 0) {
+    return 0;
+  }
+
+  const suma = arreglo.reduce((total, valor) => total + valor, 0);
+  return suma / arreglo.length;
+}
+
+const arreglo1 = [10, 20, 30, 40, 50];
+const arreglo2 = [];
+
+const promedio1 = calcularPromedio(arreglo1);
+const promedio2 = calcularPromedio(arreglo2);
+
+console.log("Promedio 1:", promedio1);
+console.log("Promedio 2:", promedio2);
